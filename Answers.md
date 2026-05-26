@@ -6,11 +6,11 @@ https://khadeejah-01.github.io/Frontend-Website/
 
 ### Run on Local Machine
 
-Download the ZIP file from GitHub to run locally.
+https://github.com/khadeejah-01/Frontend-Website
 
 ### Steps
 
-1. Open the GitHub repository using your web browser.
+1. Open the GitHub repository given above using your web browser.
 2. Click the green **Code** button at the top of the webpage.
 3. Download the repository as a ZIP file.
 4. Extract the ZIP folder on your device.
