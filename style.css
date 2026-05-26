@@ -1,0 +1,149 @@
+body{
+  background-image:url('https://media.istockphoto.com/id/932315120/vector/seamless-beehive-honeycomb-pattern.jpg?s=612x612&w=is&k=20&c=jSLd4E3YWVAbQj0SJHDM4c1tyYXdKPYr-WCVSkUgLwE=');
+  backdrop-filter:blur(5px);
+  background-repeat: repeat;
+  background-size: cover;
+  background-color:beige;
+  /* background-blend-mode:lighten; */
+
+  padding:20px 20px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  
+}
+
+.controls{
+  margin-bottom:10px;
+
+}
+.chart{
+  overflow-x:auto;
+  
+  width:100%;
+  -webkit-overflow-scrolling: touch;
+  /* to allow horizontal scroll on mobiles */
+  padding:2px;
+}
+.containerGrid{
+  background-color:#eae2b7;
+  box-sizing:border-box;
+  display: grid;
+  
+  /* height:80vh; */
+  
+  grid-template-columns:
+  minmax(150px,220px)
+  60px
+  repeat(7, minmax(60px,1fr)) ;
+  gap:5px;
+  align-items:stretch;
+  
+  /* minimum width of grid so to prevent compression*/
+  min-width:700px;
+  width:100%;
+  border: 5px solid #073b4c;
+  border-radius:10px 10px 2px 2px; 
+  padding:5px
+  /* place-items:center; */
+  /* grid-template-columns:minmax(100px, auto); */
+}
+
+.containerGrid div{
+  box-sizing:border-box;
+  border:2px solid rgb(142, 99, 1);
+  border-radius:5px;
+  padding:10px;
+  min-height:60px; 
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  word-break:break-word;
+}
+
+.days,.col-habit,.streak{
+  background:orange;
+  color:rgb(38, 1, 1);
+  font-weight:bold;
+}
+
+.celebrate{
+    animation:pop 0.3s ease;
+}
+
+@keyframes pop{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+.today{
+    background: #e9d1bb;
+    border:2px solid orange;
+    transform: scale(1.02);
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(255,165,0,0.4);
+
+}
+/* pulse effect */
+.today{
+    animation: todayPulse 2s infinite;
+}
+
+@keyframes todayPulse{
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.col-habit{
+  position: sticky;
+left: 0;
+background:orange;
+min-width:150px;
+z-index:2;
+}
+
+.habit-cell{
+    position:sticky;
+
+    left:0;
+
+    background:lightcyan;
+    color:#14213d;
+    z-index:1;
+
+    display:flex;
+    gap:3px;
+}
+.habit-cell span{
+    flex:1;
+}
+
+#title{
+  color:rgb(38, 1, 1);
+  text-decoration:underline;
+  margin:auto;
+} 
+/*to support nextline \n*/
+#emptyState{
+    white-space: pre-line;
+    background:lightcyan;
+    width:fit-content;
+    padding:10px;
+    border:2px solid rgb(142, 99, 1);
+    border-radius:5px;
+    margin-bottom:10px;
+}
