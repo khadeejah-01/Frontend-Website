@@ -1,10 +1,10 @@
-# 1. How to Run
+## 1. How to Run
 
 Click on the following link to run the website:
 
 https://khadeejah-01.github.io/Frontend-Website/
 
-## Run on Local Machine
+### Run on Local Machine
 
 Download the ZIP file from GitHub to run locally.
 
@@ -17,18 +17,16 @@ Download the ZIP file from GitHub to run locally.
 5. Open the `index.html` file with any browser.
 6. The website "Habit Tracker" will open on your local device.
 
-# 2. Stack and Design Choices
+## 2. Stack and Design Choices
 
-## Stack Choice
+### Stack Choice
 
 I chose a Vanilla Frontend Stack for this website because it was a completely frontend-based project and did not require excessive tool configuration.
 Keeping in view the time constraints, I decided to use technologies I was already comfortable with (HTML, CSS, JavaScript) instead of learning a completely new framework during development.
 
-## Design Decisions
+### Design Decisions
 
-  1. Sticky Habit Column
-
-I chose sticky habit columns so that users on smaller screens could checkmark habits easily without losing sight of the habit names while horizontally scrolling.
+  1. Sticky Habit Column: I chose sticky habit columns so that users on smaller screens could checkmark habits easily without losing sight of the habit names while horizontally scrolling.
 
   2. Horizontal Scrolling on Mobile
 
@@ -37,10 +35,13 @@ I used:
 overflow-x:auto;
 ```
 in parent div (.chart) of my conatinerGrid to allow horizontal scroll on smaller screens without collapsing the weekdays.
+  
   3. For highlighting today, I used transform scale(1.05) but it introduced a horizontal scrollbar even on full screen. So I added:
     1. padding: 5px; to .chart (gave room for scaled transform)
     2.box-sizing: border-box; to both .conatinerGrid and to grid children (prevent the overlap of habit column over streak) 
+  
   4. Week Structure Design: I used monday to sunday because it feels more productive and aligns better with workflow systems.
+  
   5. Streak interpretation: Streak counts checked days in the current visible week.
 
 ## 3. Responsiveness and Accessiblity
