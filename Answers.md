@@ -35,6 +35,7 @@ I chose sticky habit columns so that users on smaller screens could checkmark ha
 I used:
 ```css
 overflow-x:auto;
+```
 in parent div (.chart) of my conatinerGrid to allow horizontal scroll on smaller screens without collapsing the weekdays.
   3. For highlighting today, I used transform scale(1.05) but it introduced a horizontal scrollbar even on full screen. So I added:
     1. padding: 5px; to .chart (gave room for scaled transform)
@@ -48,8 +49,8 @@ in parent div (.chart) of my conatinerGrid to allow horizontal scroll on smaller
 On laptop it takes up 100% width with some padding and margin.
   2. I added keyboard navigation to the "addHabitBtn" so now it allows us to add new habit by both mouse click, as well as enter key.
   3. Color Inspiration Theme: For the title icon I chose a bee because it depicts hardwork and consistency. I aligned this concept in the theme of the website by adding yellow as it also displays optimism, and dedication.
-Because I had chosen my theme to revolve around "yellow" color and "Bees", then I referred to some free color palletes available online to get to know what border color would go with yellow and orange, thus used a dark bluish shade.
-  4. I added some motivational quotes on top to motivate the user.  
+  4. Because I had chosen my theme to revolve around "yellow" color and "Bees", then I referred to some free color palletes available online to get to know what border color would go with yellow and orange, thus used a dark bluish shade.
+  5. I added some motivational quotes on top to motivate the user.  
   4. I added a font from "google fonts" to enhance the UI
   5. I used emotes for "delete" and "rename" button to ease usability.
   6. Empty State: For empty state (no habits) I added a string on top that asks user to start making habits.
@@ -59,11 +60,13 @@ Because I had chosen my theme to revolve around "yellow" color and "Bees", then 
 ## 4. AI Usage:
 
 For the scrollbar issue on larger screens, AI gave me an alternate way of using animations. It gave me box-shadow animations to show highlighted today cell. But upon implementing it, It wasn't satisfactory. So I switched back to transform scale and searched out alternate methods to resolve this issue. Then I switched to adjusting the padding and adding box-sizing:border-box.
-To save the state of week's progress, I asked AI for possible ways there are to do it using only JS, and I decided to use objects for each habit.
+
+To save the state of week's progress, I asked AI for possible ways to do it using only JS, and I decided to use objects for each habit. Then AI helped me in modifying the checkboxes eventListener by adding the updated checkbox to habit object.
 
 ## 5. Honest Gap
 
 -> Upon checking Habit: I have added sound, but I would improve it further by adding a toast message of congratulations upon every habit user checks.
+
 ->Current streak logic works for visible week data but long term consecutive streak calculations across week boundaries could be improved further. It can be done by using actual dates instead of weekly arrays.
 
 
